@@ -35,7 +35,7 @@ var httpBuildQuery = function(queryData, numericPrefix, argSeparator, tempKey) {
       key = tempKey + '[' + key + ']';
     }
 
-    if (typeof queryData[k] === 'object' && queryData[k] !== null) {
+    if (typeof queryData[k] === 'object') {
       res = httpBuildQuery(queryData[k], null, argSeparator, key);
     } else {
       if (numericPrefix) {

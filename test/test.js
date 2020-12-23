@@ -34,7 +34,7 @@ describe('Using http-build-query', function() {
     var result = httpBuildQuery(params);
 
     expect(result).to.have.string('empty=&');
-    expect(result).to.have.string('null=&');
+    expect(result).to.not.have.string('null=&');
     expect(result).to.have.string('number=196645');
     expect(result).to.have.string('zero=0');
     expect(result).to.have.string('string=test');
